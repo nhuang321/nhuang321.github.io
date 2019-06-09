@@ -1,0 +1,85 @@
+body {
+    background-color: #282923;
+    padding-top: 110px;
+    padding-bottom: 100px;
+}
+
+body, #prompt-input{
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 18px !important;
+}
+
+.container{
+    width: 100%;
+    max-width: 1250px;
+}
+.terminal-text, .terminal-text h1 {
+    font-size: 18px !important;
+    padding-top: 25px;
+}
+
+.terminal-footer {
+    position: fixed;
+    bottom: 0px !important;
+    background-color: #42433E;
+    border-top: black solid 2px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.tooltip {
+    font-size: 17px;
+}
+
+#prompt-input {
+    background: transparent;
+    border: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    outline: none;
+}
+
+#prompt-input: focus{
+    outline: none;
+}
+
+.navbar{
+    background-color:   #42433E !important;
+}
+.navbar-brand {
+    font-size: 40px;
+}
+
+.navbar li {
+    font-size: 20px;
+}
+
+.navlink a:hover {
+    color: #3BBFC3 !important;
+}
+
+.card-body, .card-header{
+    background-color: white;
+    color: black;
+    font-family: helvetica;
+}
+
+.blue{
+    color: #3BBFC3;
+}
+
+
+.green{
+    color:  #8FDF25;
+}
+
+.purple{
+    color: #A867D4;
+}
+
+.red{
+    color:  #DC0852;
+}

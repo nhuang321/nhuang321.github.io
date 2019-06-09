@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Nancy Huang</title>
+    <meta name = "description" content = "Personal Website">
+    <meta name = "author" content = "Nancy Huang">
+
+    <!-- Bootstrap for responsive design (Flatly Theme) -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Custom font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Nav Bar --> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Nancy Huang</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link"  href="#" onclick="display('home')">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="display('about')">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onclick="display('contact')">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="terminal-screen">
+            <h1 class="terminal-text screen-text"></h1>
+        </div>
+    </div>
+
+    <div class="terminal-footer">
+        <div id= "terminal-input" class="container" >
+            <span class="prompt" data-toggle="tooltip" data-placement="top" data-trigger="manuel" title="Type commands like 'about' here">></span>
+            <input class="command" type="text" id="prompt-input" maxlength="60">
+        </div>
+    </div>
+
+    <!--popper.js (necessary for tooltip) -->
+     <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- For automated typing onscreen -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <!-- Main javascript, operates Terminal -->
+    <script src="js/main.js"></script>
+
+    <!-- Dummy script blocks that act as HTML templates for generated divs (Based on commands) -->
+
+    <script id="home"  type="text/template">
+      <div class= "help">
+        <p> This is a <span class="blue"> command line interface</span>. If you're a <span class="purple"> progammer</span>, this will feel familiar.
+        <br> If you're not, this is your chance to be a <span class="green">super cool computer nerd</span>!
+        <br> Type in any of the following commands to explore the site.
+        </p>
+        <ul class="red">
+            <li>about</li>
+            <li>contact</li>
+            <li>comics</li>
+            <li>hi</li>
+            <li>quotes</li>
+            <li>home</li>
+        </ul>
+      <div>
+    </script>
+
+    <script id="about" type="text/template">
+
+      <div class="card border-primary mb-3 " style="max-width: 100%;">
+        <div class="card-header">About Me</div>
+        <div class="card-body">
+  
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-lg-8 my-auto">
+              <p class="card-text" > 
+              I'm an eternal jokester, hopeless ambivert, avid podcast-listener, and prolific frolicker and who's prone to pondering about everything from behavior economics to hypothetical moral reasoning.</p>
+
+              <p class="card-text" > Currently, I'm also an undergraduate at the University of California, Berkeley, where I'm pursuing a major in Computer Science. One day, I hope to use technology to help the world and foster education, productivity, and happiness.</p>
+
+              <p class="card-text" >In a typical day, you can find me coding, reading, or 'chillin in a library or a park. Other times, I'm drawing, hiking, listening to music, or hanging out with friends.</p>
+
+            </div>
+          <div class="col-xs-12 col-md-6 col-lg-4 my-auto">
+              <img class="img-fluid rounded" src="img/profile.jpg" style="max-height: 370px">
+          </div>
+        </row>
+        </div>
+      </div>
+      
+    </script>
+
+    <script id="comics"  type="text/template">
+
+      <div class="card border-primary mb-3" style="max-width: 100%;">
+        <div class="card-header">Comics</div>
+        <div class="card-body">
+        <div class="row text-center">
+          <div class="col-xs-12 col-md-6 col-lg-6 my-auto">
+            <p class="card-text" style="text-align: center">Comical, a website featuring webcomics about my life as a UC Berkeley student</p>
+            
+            <a href="https://nhuang321.github.io/ComicalComics/"><img class="img-fluid rounded" src="img/comical-profile.png" style="max-height: 350px"></a>
+
+          </div>
+          <div class="col-xs-12 col-md-6 col-lg-6 my-auto">
+            <p class="card-text" style="text-align: center">A valentine generator filled with 
+              Computer Science related puns for your nerd love <3</p>
+            
+             <a href="https://nhuang321.github.io/CSValentineGenerator/"> <img class="img-fluid rounded" src="img/csvalentine-profile.png" style="max-height: 350px"></a>    
+          </div>
+        </row>
+        </div>
+      </div>
+      
+    </script>
+
+    <script id="quotes" type="text/template">
+      <div class="card border-primary mb-3" style="max-width: 100%;">
+        <div class="card-header">Quotes</div>
+        <div class="card-body">
+        <div class="row">
+          <div class="col-lg-12 my-auto">
+            <p class="card-text" >
+             "To become less wrong, you must give up being most right." <span style="text-align: right">-G Gordon Worley III</span></p>
+             <p class="card-text" >
+             "Don't be interesting, be interested." <span >-James C. Collins</span></p>
+            <p class="card-text">
+             "The meaning of life is to give life a meaning." <span style="text-align: right">-Sabrina Dickens</span></p>
+             <p class="card-text">
+             "Be who you are and say what you feel because those who mind don't matter and those who matter don't mind." <span >-Dr. Suess</span>
+           </p>
+          </div>
+        </row>
+        </div>
+      </div>
+      
+    </script>
+  </body>
+</html>
